@@ -14,10 +14,11 @@ Jjob('NodeJS_By_DSL') {
     triggers {
         scm('H/1 * * * *')
     }
-    wrappers{
+     wrappers {
         nodejs('NodeJS') // this is the name of the NodeJS installation in 
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
+
 
     steps {
         shell("npm install")

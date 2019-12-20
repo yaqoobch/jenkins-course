@@ -1,4 +1,4 @@
-job('NodeJS_By_DSL') {
+Jjob('NodeJS_By_DSL') {
     scm { 
         github('yaqoobch/jenkins-course')
          
@@ -15,7 +15,7 @@ job('NodeJS_By_DSL') {
         scm('H/1 * * * *')
     }
     wrappers{
-        nodejs('nodejs') // this is the name of the NodeJS installation in 
+        nodejs('NodeJS') // this is the name of the NodeJS installation in 
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
 

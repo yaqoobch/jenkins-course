@@ -45,7 +45,7 @@ job('NodeJS_Docker_Push_DSL') {
         dockerBuildAndPublish{
             repositoryName('yaqoobc/nodejs-docker-demo')
             tag('${GIT_REVISION,lenght=9}')
-            registryCredentials('dockerhub')
+            registryCredentials('f7743e49-0b0d-4fd0-a299-fdb4f8efb1ac')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)

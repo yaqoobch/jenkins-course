@@ -2,9 +2,8 @@
 
 job('NodeJS_Docker_Push_DSL') {
     scm {
-        git('https://github.com/yaqoobch/jenkins-course.git')
-          node / gitConfigName('yaqoobch')
-          node / gitConfigEmail('jacob@infopower.co.uk')
+         github('yaqoobch/jenkins-course')
+       
     }
 
     triggers {
@@ -14,7 +13,7 @@ job('NodeJS_Docker_Push_DSL') {
     }
 
     wrappers {
-        nodejs('nodejs')
+        nodejs('NodeJS')
     }
 
     steps {

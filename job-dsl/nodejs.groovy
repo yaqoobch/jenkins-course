@@ -15,7 +15,7 @@ job('NodeJS_By_DSL') {
         scm('H/1 * * * *')
     }
     wrappers{
-        nodejs('nodejs') / this is the name of the NodeJS installation in 
+        nodejs('nodejs') // this is the name of the NodeJS installation in 
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
 

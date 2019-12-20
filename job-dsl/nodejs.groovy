@@ -1,6 +1,6 @@
 job('NodeJS_By_DSL') {
     scm { 
-        github('https://github.com/yaqoobch/jenkins-course.git')
+        github('yaqoobch/jenkins-course')
          
     }
     /*

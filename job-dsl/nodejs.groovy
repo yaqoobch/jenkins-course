@@ -1,4 +1,4 @@
-Jjob('NodeJS_By_DSL') {
+job('NodeJS_By_DSL') {
     scm { 
         github('yaqoobch/jenkins-course')
          

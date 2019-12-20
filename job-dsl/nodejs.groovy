@@ -1,6 +1,8 @@
 job('NodeJS_By_DSL') {
     scm { 
         git('https://github.com/yaqoobch/jenkins-course.git')
+           node / gitConfigName('yaqoobch')
+          node / gitConfigEmail('jacob@infopower.co.uk')
 
     }
     /*

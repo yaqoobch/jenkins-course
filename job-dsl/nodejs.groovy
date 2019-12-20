@@ -39,7 +39,6 @@ job('NodeJS_Docker_Push_DSL') {
 
     wrappers {
         nodejs('nodejs')
-
     }
 
     steps {
@@ -54,4 +53,5 @@ job('NodeJS_Docker_Push_DSL') {
         }
 
     }
+}
     

@@ -2,10 +2,10 @@
 
 job('NodeJS_Docker_Push_DSL') {
     scm {
-         remote {
+         
                 github('yaqoobch/jenkins-course')
                 refspec('+refs/pull/*:refs/remotes/origin/pr/*')
-            }
+          
             branch('${sha1}')
        
     }

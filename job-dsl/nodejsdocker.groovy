@@ -2,7 +2,11 @@
 
 job('NodeJS_Docker_Push_DSL') {
     scm {
-         github('yaqoobch/jenkins-course')
+         remote {
+                github('yaqoobch/jenkins-course')
+                refspec('+refs/pull/*:refs/remotes/origin/pr/*')
+            }
+            branch('${sha1}')
        
     }
 
@@ -13,14 +17,21 @@ job('NodeJS_Docker_Push_DSL') {
     }
 
     wrappers {
-        nodejs('NodeJS')
+        nodejs('myNodeJS')
     }
+    
+    steps {
+        shell('npm install')  
+    
+    }
+    
+    
 
     steps {
         dockerBuildAndPublish{
             repositoryName('yaqoobc/nodejs-docker-demo')
            // tag('${GIT_REVISION,lenght=9}')
-            registryCredentials('dockerhub')
+            registryCredentials('docker')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)

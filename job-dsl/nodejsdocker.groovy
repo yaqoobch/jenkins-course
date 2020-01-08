@@ -40,10 +40,10 @@ job('NodeJS_Docker_Push_DSL') {
     
     steps {
         dockerBuildAndPublish{
-            repositoryName('nodjsdemo')
+            repositoryName('510212350616.dkr.ecr.eu-west-1.amazonaws.com/nodjsdemo')
             dockerRegistryURL('https://510212350616.dkr.ecr.eu-west-1.amazonaws.com/')
            // tag('${GIT_REVISION,lenght=9}')
-           // registryCredentials('510212350616.dkr.ecr.eu-west-1.amazonaws.com/nodjsdemo')
+            registryCredentials('AWS')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)
